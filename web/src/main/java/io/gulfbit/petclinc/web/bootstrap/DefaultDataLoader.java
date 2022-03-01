@@ -1,11 +1,9 @@
-package io.gulfbit.petclinc.web;
+package io.gulfbit.petclinc.web.bootstrap;
 
 import io.gulfbit.petclinc.data.model.Owner;
 import io.gulfbit.petclinc.data.model.Vet;
 import io.gulfbit.petclinc.data.services.OwnerService;
 import io.gulfbit.petclinc.data.services.VetService;
-import io.gulfbit.petclinc.data.services.map.OwnerServiceMap;
-import io.gulfbit.petclinc.data.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 //import io.gulfbit.petclinic.data.*;
@@ -24,14 +22,12 @@ public class DefaultDataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Owner owner1 = new Owner();
-        owner1.setId(1L);
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(2L);
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
 
@@ -40,14 +36,12 @@ public class DefaultDataLoader implements CommandLineRunner {
         System.out.println("Loaded Owners....");
 
         Vet vet1 = new Vet();
-        vet1.setId(1L);
         vet1.setFirstName("Sam");
         vet1.setLastName("Axe");
 
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(2L);
         vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
 

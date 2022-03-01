@@ -1,4 +1,4 @@
-package io.gulfbit.petclinc.web;
+package io.gulfbit.petclinc.web.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +8,8 @@ public class IndexController {
 
     @RequestMapping({"", "/", "/index", "/index.html"})
     public String index() {
+        System.out.println("Test live reload ... l ");
+
         return "index";
     }
 

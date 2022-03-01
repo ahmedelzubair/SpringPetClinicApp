@@ -2,7 +2,9 @@ package io.gulfbit.petclinc.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan(basePackages = {"io.gulfbit.petclinc.web", "io.gulfbit.petclinc.data"})
 @SpringBootApplication
 public class PetClinicApplication {
 
