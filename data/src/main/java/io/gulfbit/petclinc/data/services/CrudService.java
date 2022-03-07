@@ -3,7 +3,7 @@ package io.gulfbit.petclinc.data.services;
 import java.util.Set;
 
 public interface CrudService<T, ID> {
-    T save(T object);
+    T save(T obj);
 
     T findById(ID id);
 

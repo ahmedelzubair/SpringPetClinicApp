@@ -10,8 +10,8 @@ public class PetServiceDataSource extends GenericDataSourceService<Pet, Long> im
 
 
     @Override
-    public Pet save(Pet object) {
-        return super.save(object);
+    public Pet save(Pet obj) {
+        return super.save(obj);
     }
 
     @Override

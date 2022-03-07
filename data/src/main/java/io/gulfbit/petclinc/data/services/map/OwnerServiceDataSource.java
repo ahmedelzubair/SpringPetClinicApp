@@ -10,8 +10,8 @@ public class OwnerServiceDataSource extends GenericDataSourceService<Owner, Long
 
 
     @Override
-    public Owner save(Owner object) {
-        return super.save(object);
+    public Owner save(Owner obj) {
+        return super.save(obj);
     }
 
     @Override
