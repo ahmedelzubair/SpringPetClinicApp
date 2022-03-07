@@ -8,7 +8,8 @@ public class IndexController {
 
     @RequestMapping({"", "/", "/index", "/index.html"})
     public String index() {
-        System.out.println("Test live reload ... l ");
+
+        System.out.println("Test live reload jhjhjhgjhgjhgj...");
 
         return "index";
     }
