@@ -60,8 +60,8 @@ public class OwnerServiceDataSource extends GenericDataSourceService<Owner, Long
     }
 
     @Override
-    public void delete(Owner obj) {
-        super.delete(obj);
+    public void delete(Owner object) {
+        super.delete(object);
     }
 
     @Override

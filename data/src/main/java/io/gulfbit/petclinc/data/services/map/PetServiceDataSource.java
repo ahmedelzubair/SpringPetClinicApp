@@ -25,8 +25,8 @@ public class PetServiceDataSource extends GenericDataSourceService<Pet, Long> im
     }
 
     @Override
-    public void delete(Pet obj) {
-        super.delete(obj);
+    public void delete(Pet object) {
+        super.delete(object);
     }
 
     @Override

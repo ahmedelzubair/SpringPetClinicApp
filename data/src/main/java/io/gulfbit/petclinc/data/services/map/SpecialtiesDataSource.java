@@ -2,9 +2,11 @@ package io.gulfbit.petclinc.data.services.map;
 
 import io.gulfbit.petclinc.data.model.Speciality;
 import io.gulfbit.petclinc.data.services.SpecialityService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class SpecialtiesDataSource extends GenericDataSourceService<Speciality, Long> implements SpecialityService {
     @Override
     public Speciality save(Speciality obj) {
@@ -27,7 +29,7 @@ public class SpecialtiesDataSource extends GenericDataSourceService<Speciality, 
     }
 
     @Override
-    public void delete(Speciality obj) {
-        super.delete(obj);
+    public void delete(Speciality object) {
+        super.delete(object);
     }
 }

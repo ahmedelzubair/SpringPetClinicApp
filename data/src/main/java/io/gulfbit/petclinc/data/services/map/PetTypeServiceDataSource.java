@@ -31,7 +31,7 @@ public class PetTypeServiceDataSource extends GenericDataSourceService<PetType, 
     }
 
     @Override
-    public void delete(PetType obj) {
-        super.delete(obj);
+    public void delete(PetType object) {
+        super.delete(object);
     }
 }
