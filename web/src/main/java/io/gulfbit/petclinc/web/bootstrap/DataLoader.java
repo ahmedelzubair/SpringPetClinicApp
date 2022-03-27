@@ -1,10 +1,7 @@
 package io.gulfbit.petclinc.web.bootstrap;
 
 import io.gulfbit.petclinc.data.model.*;
-import io.gulfbit.petclinc.data.services.OwnerService;
-import io.gulfbit.petclinc.data.services.PetTypeService;
-import io.gulfbit.petclinc.data.services.SpecialityService;
-import io.gulfbit.petclinc.data.services.VetService;
+import io.gulfbit.petclinc.data.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService,
-                      PetTypeService petTypeService, SpecialityService specialityService) {
+                      PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -90,6 +89,12 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
+
+        Visit visit = new Visit();
+        visit.setDate(LocalDate.now());
+        visit.setDescription("Test Desc");
+        visit.setPet(mikesPet);
+        visitService.save(visit);
 
         System.out.println("Loaded Owners....");
 

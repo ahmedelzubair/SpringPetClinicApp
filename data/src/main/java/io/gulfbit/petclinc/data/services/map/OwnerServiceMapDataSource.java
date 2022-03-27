@@ -5,17 +5,19 @@ import io.gulfbit.petclinc.data.model.Pet;
 import io.gulfbit.petclinc.data.services.OwnerService;
 import io.gulfbit.petclinc.data.services.PetService;
 import io.gulfbit.petclinc.data.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class OwnerServiceDataSource extends GenericDataSourceService<Owner, Long> implements OwnerService {
+@Profile({"default", "map_datasource"})
+public class OwnerServiceMapDataSource extends HashMapDataSourceService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerServiceDataSource(PetTypeService petTypeService, PetService petService) {
+    public OwnerServiceMapDataSource(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }

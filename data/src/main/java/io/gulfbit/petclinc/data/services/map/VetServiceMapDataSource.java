@@ -4,15 +4,17 @@ import io.gulfbit.petclinc.data.model.Speciality;
 import io.gulfbit.petclinc.data.model.Vet;
 import io.gulfbit.petclinc.data.services.SpecialityService;
 import io.gulfbit.petclinc.data.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class VetServiceDataSource extends GenericDataSourceService<Vet, Long> implements VetService {
+@Profile({"default", "map_datasource"})
+public class VetServiceMapDataSource extends HashMapDataSourceService<Vet, Long> implements VetService {
     private final SpecialityService specialtyService;
 
-    public VetServiceDataSource(SpecialityService specialtyService) {
+    public VetServiceMapDataSource(SpecialityService specialtyService) {
         this.specialtyService = specialtyService;
     }
 

@@ -2,12 +2,14 @@ package io.gulfbit.petclinc.data.services.map;
 
 import io.gulfbit.petclinc.data.model.Speciality;
 import io.gulfbit.petclinc.data.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtiesDataSource extends GenericDataSourceService<Speciality, Long> implements SpecialityService {
+@Profile({"default", "map_datasource"})
+public class SpecialtiesMapDataSource extends HashMapDataSourceService<Speciality, Long> implements SpecialityService {
     @Override
     public Speciality save(Speciality obj) {
         return super.save(obj);
