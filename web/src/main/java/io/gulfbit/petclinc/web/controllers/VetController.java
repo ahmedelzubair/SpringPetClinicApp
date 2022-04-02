@@ -1,7 +1,7 @@
 package io.gulfbit.petclinc.web.controllers;
 
-import io.gulfbit.petclinc.data.model.Vet;
-import io.gulfbit.petclinc.data.services.VetService;
+import io.gulfbit.petclinc.web.data.model.Vet;
+import io.gulfbit.petclinc.web.data.services.VetService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

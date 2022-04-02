@@ -8,7 +8,7 @@
 
 
     <modules>
-        <module>data</module>
+<!--        <module>data</module>-->
         <module>web</module>
     </modules>
 

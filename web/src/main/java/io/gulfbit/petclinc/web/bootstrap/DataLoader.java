@@ -1,7 +1,7 @@
 package io.gulfbit.petclinc.web.bootstrap;
 
-import io.gulfbit.petclinc.data.model.*;
-import io.gulfbit.petclinc.data.services.*;
+import io.gulfbit.petclinc.web.data.model.*;
+import io.gulfbit.petclinc.web.data.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
